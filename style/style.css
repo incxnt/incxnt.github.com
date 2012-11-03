@@ -1,5 +1,6 @@
 body {margin: 0;}
 a {text-decoration: none;}
+ul {list-style-position: inside;}
 ul li {list-style: none;}
 p.mapdesc {margin: 0; font-size: xx-small;}
 #paper {width: 600px; margin-right: auto; margin-left: auto;}
