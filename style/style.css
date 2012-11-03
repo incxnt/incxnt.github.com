@@ -1,7 +1,6 @@
 body {margin: 0;}
 a {text-decoration: none;}
-li {margin-left: 0;}
-ul li {list-style: none;}
+li {list-style: none;}
 thead {text-align: right;}
 tbody {text-align: right;}
 p.mapdesc {margin: 0; font-size: xx-small;}
