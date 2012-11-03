@@ -1,7 +1,6 @@
 body {margin: 0;}
 a {text-decoration: none;}
-thead {text-align: right;}
-tbody {text-align: right;}
+thead, tbody {text-align: right;}
 p.mapdesc {margin: 0; font-size: xx-small;}
 #paper {width: 600px; margin-right: auto; margin-left: auto;}
 #map {width: 600px; height: 400px;}
