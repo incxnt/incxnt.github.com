@@ -1,3 +1,4 @@
+article, section, aside, hgroup, nav, header, footer, figure, figcaption {display: block;}
 body {margin: 0;}
 a {text-decoration: none;}
 thead, tbody {text-align: right;}
