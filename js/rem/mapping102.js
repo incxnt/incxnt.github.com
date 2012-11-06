@@ -2,10 +2,6 @@
 var zoom = 13;
 var maxZoom = 18;
 var ggl = new L.Google();
-/*
-var bng = new L.BingLayer(
-	"AjLuUJvNNUSZBDz_xYPYy51rXL6hZMqaPbJQvwIf-CYHeL_sTxlGpZ-_bf67S9cv");
-*/
 var datarent = new L.geoJson(datarent, {
 	onEachFeature: onEachFeature
 });
