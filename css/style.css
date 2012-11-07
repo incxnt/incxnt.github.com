@@ -2,6 +2,4 @@ article, section, aside, hgroup, nav, header, footer, figure, figcaption {displa
 body {margin: 0;}
 a {text-decoration: none;}
 thead, tbody {text-align: right;}
-p.mapdesc {margin: 0; font-size: x-small;}
 #paper {width: 600px; margin-right: auto; margin-left: auto;}
-#map {width: 600px; height: 400px;}
