@@ -24,6 +24,7 @@ Data collection v1.0.0
 <script type="text/javascript" src="/js/recline/dist/recline.js"></script>
 <!-- Dataset model end -->
 <!-- Data Collection App JS Library Version v1.0.0 -->
+<!--
 <script type="text/javascript">
 var data = [
 	{id: 0, date: '2011-01-01', x: 1, y: 2, z: 3, country: 'DE', geo: {lat:52.56, lon:13.40} },
@@ -37,28 +38,30 @@ var dataset = new recline.Model.Dataset({
 	records: data
 });
 </script>
+-->
 </head>
 <body>
-<div id="paper"><div class="ex-2"></div></div>
+<div id="paper"><div class="my-gdocs"></div></div>
 <script type="text/javascript">
-// must have a div with class="ex-1"
-var $el = $('.ex-2');
-
-// query with text 'UK' - this will attempt to match any field for UK
-// Also limit the query to return a maximum of 2 results using the size attribute 
-
-// query function has asynchronous behaviour and returns a promise object
-// (even for the case of in memory data where querying in fact happens synchronously)
-// On completion the display function will be called
-dataset.query({q: 'UK', size: 2}).done(function() {
-  $('.ex-2').append('Total found: ' + dataset.recordCount);
-  $('.ex-2').append(' Total returned: ' + dataset.records.length);
-  $('.ex-2').append(
-    $('<pre />').html(
-      JSON.stringify(dataset.records.toJSON(), null, 2)
-    )
-  );
+// Create a dataset with a Google Docs backend and a url to the Google Doc
+var dataset = new recline.Model.Dataset({
+  url: 'https://docs.google.com/spreadsheet/ccc?key=0Aon3JiuouxLUdGZPaUZsMjBxeGhfOWRlWm85MmV0UUE#gid=0',
+  backend: 'gdocs'
 });
-</script>
+
+// Optional - display the results in a grid
+// Note how we can set this up before any data has arrived
+// Views will listen for query completion and update themselves automatically
+var grid = new recline.View.Grid({
+  model: dataset
+});
+$('#my-gdocs').append(grid.el);
+
+// Now do the query to the backend to load data
+dataset.fetch().done(function(dataset) {
+  if (console) {
+    console.log(dataset.records);
+  }
+});</script>
 </body>
 </html>
