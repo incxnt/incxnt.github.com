@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="/css/style.css" />
+<!--
+Data collection v1.0.0
+-->
+<!-- Page based information v1.0.0 -->
+<title></title>
+<meta name="description" content="XNT focus on visualization and web map">
+<meta name="keywords" content="visualization, map, XNT, 数据可视化, 信息可视化, 地图">
+<!-- Page based information v1.0.0 -->
+<!-- Data Collection App JS Library Version v1.0.0 -->
+<!-- html5 shiv start -->
+<!--[if lt IE 9]>
+<script src="/js/html5shiv/dist/html5shiv.js"></script>
+<![endif]-->
+<!-- html5 shiv end -->
+<!-- Dataset model start -->
+<script type="text/javascript" src="/js/jquery/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="/js/underscore/underscore-min.js"></script>
+<script type="text/javascript" src="/js/backbone/backbone-min.js"></script>
+<script type="text/javascript" src="/js/recline/dist/recline.js"></script>
+<!-- Dataset model end -->
+<!-- Data Collection App JS Library Version v1.0.0 -->
+<script type="text/javascript">
+var data = [
+	{id: 0, date: '2011-01-01', x: 1, y: 2, z: 3, country: 'DE', geo: {lat:52.56, lon:13.40} },
+	{id: 1, date: '2011-02-02', x: 2, y: 4, z: 24, country: 'UK', geo: {lat:54.97, lon:-1.60}},
+	{id: 2, date: '2011-03-03', x: 3, y: 6, z: 9, country: 'US', geo: {lat:40.00, lon:-75.5}},
+	{id: 3, date: '2011-04-04', x: 4, y: 8, z: 6, country: 'UK', geo: {lat:57.27, lon:-6.20}},
+	{id: 4, date: '2011-05-04', x: 5, y: 10, z: 15, country: 'UK', geo: {lat:51.58, lon:0}},
+	{id: 5, date: '2011-06-02', x: 6, y: 12, z: 18, country: 'DE', geo: {lat:51.04, lon:7.9}}
+];
+var dataset = new recline.Model.Dataset({
+	records: data
+});
+</script>
+</head>
+<body>
+<div id="paper"><div class="ex-1"></div>
+<script type="text/javascript">
+// (for convenience) assume availability of jquery
+// must have div with class="ex-1"
+var $el = $('.ex-1');
+
+// total number of records resulting from latest query
+$el.append('Total found: ' + dataset.recordCount + '<br />');
+$el.append('Total returned: ' + dataset.records.length);
+
+$el.append('<hr />');
+
+// get 2nd record in list (note collection indexes off 0!)
+// this is an instance of a Record object
+var record = dataset.records.at(1);
+
+// if records have an id you can get by id too ...
+// var record = dataset.records.get(record-id);
+
+// To get record attribute we use 'get'
+var recdate = record.get('date');
+
+$el.append('Date is: ' + recdate);
+$el.append('<hr />');
+
+// We can also convert the Record back to simple JS object
+var simple = record.toJSON();
+
+$el.append('<h4>Record as simple object</h4>');
+$el.append('<pre>' + JSON.stringify(simple, null, 2) + '</pre>');
+</script>
+</div>
+</body>
+</html>
