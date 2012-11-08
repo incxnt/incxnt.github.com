@@ -17,52 +17,46 @@ Data collection v1.0.0
 <script src="/js/html5shiv/dist/html5shiv.js"></script>
 <![endif]-->
 <!-- html5 shiv end -->
-<!-- Dataset model start -->
+<!-- Data application start -->
+<link rel="stylesheet" href="/js/bootstrap/css/bootstrap.css" />
+<link rel="stylesheet" href="/js/recline/css/grid.css" />
 <script type="text/javascript" src="/js/jquery/jquery-1.8.2.min.js"></script>
 <script type="text/javascript" src="/js/underscore/underscore-min.js"></script>
 <script type="text/javascript" src="/js/backbone/backbone-min.js"></script>
+<script type="text/javascript" src="/js/mustache.js/mustache.js"></script>
+<script type="text/javascript" src="/js/bootstrap/js/bootstrap.js"></script>
 <script type="text/javascript" src="/js/recline/dist/recline.js"></script>
-<!-- Dataset model end -->
+<link rel="stylesheet" href="/js/recline/css/slickgrid.css">
+<script type="text/javascript" src="/js/SlickGrid/lib/jquery-ui-1.8.16.custom.min.js"></script>
+<script type="text/javascript" src="/js/SlickGrid/lib/jquery.event.drag-2.0.min.js"></script>
+<script type="text/javascript" src="/js/SlickGrid/slick.grid.js"></script>
+<script type="text/javascript" src="/js/recline/src/view.slickgrid.js"></script>
+<!-- Data application start -->
 <!-- Data Collection App JS Library Version v1.0.0 -->
-<!--
 <script type="text/javascript">
 var data = [
-	{id: 0, date: '2011-01-01', x: 1, y: 2, z: 3, country: 'DE', geo: {lat:52.56, lon:13.40} },
-	{id: 1, date: '2011-02-02', x: 2, y: 4, z: 24, country: 'UK', geo: {lat:54.97, lon:-1.60}},
-	{id: 2, date: '2011-03-03', x: 3, y: 6, z: 9, country: 'US', geo: {lat:40.00, lon:-75.5}},
-	{id: 3, date: '2011-04-04', x: 4, y: 8, z: 6, country: 'UK', geo: {lat:57.27, lon:-6.20}},
-	{id: 4, date: '2011-05-04', x: 5, y: 10, z: 15, country: 'UK', geo: {lat:51.58, lon:0}},
-	{id: 5, date: '2011-06-02', x: 6, y: 12, z: 18, country: 'DE', geo: {lat:51.04, lon:7.9}}
+  {id: 0, date: '2011-01-01', x: 1, y: 2, z: 3, country: 'DE', geo: {lat:52.56, lon:13.40} },
+  {id: 1, date: '2011-02-02', x: 2, y: 4, z: 24, country: 'UK', geo: {lat:54.97, lon:-1.60}},
+  {id: 2, date: '2011-03-03', x: 3, y: 6, z: 9, country: 'US', geo: {lat:40.00, lon:-75.5}},
+  {id: 3, date: '2011-04-04', x: 4, y: 8, z: 6, country: 'UK', geo: {lat:57.27, lon:-6.20}},
+  {id: 4, date: '2011-05-04', x: 5, y: 10, z: 15, country: 'UK', geo: {lat:51.58, lon:0}},
+  {id: 5, date: '2011-06-02', x: 6, y: 12, z: 18, country: 'DE', geo: {lat:51.04, lon:7.9}}
 ];
 var dataset = new recline.Model.Dataset({
-	records: data
+  records: data
 });
 </script>
--->
 </head>
 <body>
-<div id="paper"><div id="my-gdocs"></div></div>
+<div id="paper"><div id="mygrid" style="height: 400px"></div></div>
 <script type="text/javascript">
-// Create a dataset with a Google Docs backend and a url to the Google Doc
-var dataset = new recline.Model.Dataset({
-  url: 'https://docs.google.com/spreadsheet/ccc?key=0Aon3JiuouxLUdGZPaUZsMjBxeGhfOWRlWm85MmV0UUE#gid=0',
-  backend: 'gdocs'
+var $el = $('#mygrid');
+var grid = new recline.View.SlickGrid({
+  model: dataset,
+  el: $el
 });
-
-// Optional - display the results in a grid
-// Note how we can set this up before any data has arrived
-// Views will listen for query completion and update themselves automatically
-var grid = new recline.View.Grid({
-  model: dataset
-});
-$('#my-gdocs').append(grid.el);
-
-// Now do the query to the backend to load data
-dataset.fetch().done(function(dataset) {
-  if (console) {
-    console.log(dataset.records);
-  }
-});
+grid.visible = true;
+grid.render();
 </script>
 </body>
 </html>
