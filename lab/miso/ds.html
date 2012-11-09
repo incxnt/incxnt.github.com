@@ -28,8 +28,8 @@ var ds = new Miso.Dataset({
 
 ds.fetch({
   success : function() {
-    log("Available Columns:" + this.columnNames());
-    log("There are " + this.length + " rows");
+    console.log("Available Columns:" + this.columnNames());
+    console.log("There are " + this.length + " rows");
   }
 });
 </script>
