@@ -15,21 +15,20 @@
 <!-- Library Version v1.0.0 -->
 </head>
 <body>
-<script>
-var data = [
-  { color : "red",   r : 255, g : 0,   b : 0   },
-  { color : "blue",  r : 0,   g : 0,   b : 255 },
-  { color : "green", r : 0,   g : 255, b : 0   }
-];
+<script type="text/javascript">
 var ds = new Miso.Dataset({
-  url : 'crudeoil.csv',
-  delimiter : ','
+  importer : Miso.Dataset.Importers.GoogleSpreadsheet,
+  parser : Miso.Dataset.Parsers.GoogleSpreadsheet,
+  key : "0Asnl0xYK7V16dFpFVmZUUy1taXdFbUJGdGtVdFBXbFE",
+  worksheet : "1"
 });
 
-ds.fetch({
+ds.fetch({ 
   success : function() {
-    console.log("Available Columns:" + this.columnNames());
-    console.log("There are " + this.length + " rows");
+    log(ds.columnNames());
+  },
+  error : function() {
+    log("Are you sure you are connected to the internet?");
   }
 });
 </script>
