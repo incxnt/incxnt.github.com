@@ -11,13 +11,12 @@
 <meta name="keywords" content="visualization, map, XNT, 数据可视化, 信息可视化, 地图">
 <!-- Page based information v1.0.0 -->
 <!-- Data collection app v1.0.0 -->
-
+<script type="text/javascript" src="/js/miso-ds/miso.ds.deps.ie.min.0.3.0.js"></script>
 <!-- Data collection app v1.0.0 -->
 <!-- Data collection v1.0.0 -->
 </head>
 <body>
-<div id="paper">
-<script src="/js/miso-ds/miso.ds.deps.ie.min.0.3.0.js"></script>
+<div id="paper"></div>
 <script type="text/javascript">
 var data = [
   { color : "red",   r : 255, g : 0,   b : 0   },
@@ -27,7 +26,6 @@ var data = [
 var ds = new Miso.Dataset({
   data : data
 });
-
 ds.fetch({ 
   success : function() {
     log("Dataset Ready. Columns: " + this.columnNames());
@@ -36,6 +34,5 @@ ds.fetch({
   }
 });
 </script>
-</div>
 </body>
 </html>
