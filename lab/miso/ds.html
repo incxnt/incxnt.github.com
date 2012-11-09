@@ -15,22 +15,11 @@
 <!-- Library Version v1.0.0 -->
 </head>
 <body>
+<form>
+Email: <input type="text" name="email" id="email" value="" />
+<input type="submit" value="Submit" />
+</form>
 <script type="text/javascript">
-var ds = new Miso.Dataset({
-  importer : Miso.Dataset.Importers.GoogleSpreadsheet,
-  parser : Miso.Dataset.Parsers.GoogleSpreadsheet,
-  key : "0Asnl0xYK7V16dFpFVmZUUy1taXdFbUJGdGtVdFBXbFE",
-  worksheet : "1"
-});
-
-ds.fetch({ 
-  success : function() {
-    console.log(ds.columnNames());
-  },
-  error : function() {
-    console.log("Are you sure you are connected to the internet?");
-  }
-});
 </script>
 </body>
 </html>
