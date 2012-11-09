@@ -7,7 +7,7 @@
 <script>
     var ds = new Miso.Dataset({
         url : 'data.csv',
-        delimiter : "\t",
+        delimiter : ",",
     }).fetch({
         success: function() {
             console.log("Available Columns:" + this.columnNames());
