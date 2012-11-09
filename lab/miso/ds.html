@@ -16,16 +16,22 @@
 </head>
 <body>
 <script>
-    var ds = new Miso.Dataset({
-        url : 'data.csv',
-        delimiter : ",",
-    }).fetch({
-        success: function() {
-            log("Available Columns:" + this.columnNames());
-            log("There are " + this.length + " rows");
-            log(this);
-        }
-    });
+var data = [
+  { color : "red",   r : 255, g : 0,   b : 0   },
+  { color : "blue",  r : 0,   g : 0,   b : 255 },
+  { color : "green", r : 0,   g : 255, b : 0   }
+];
+var ds = new Miso.Dataset({
+  data : data
+});
+
+ds.fetch({ 
+  success : function() {
+    log("Dataset Ready. Columns: " + this.columnNames());
+    log("There are " + this.length + " rows");
+    log("Available Colors: " + this.column("color").data);
+  }
+});
 </script>
 </body>
 </html>
