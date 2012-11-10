@@ -11,15 +11,21 @@
 <meta name="keywords" content="visualization, map, XNT, 数据可视化, 信息可视化, 地图">
 <!-- Page based information v1.0.0 -->
 <!-- Library Version v1.0.0 -->
+<script src="/js/jquery/jquery-1.8.2.min.js"></script>
 <script src="/js/miso-ds/miso.ds.deps.ie.min.0.3.0.js"></script>
 <!-- Library Version v1.0.0 -->
 </head>
 <body>
-<form id="collection">
+<form id="collection" action="" method="POST">
 电子邮件: <input type="text" name="email" id="email" value="" />
-<a href="#" onclick="document.getElementById('collection').submit;">提交</a>
+<input type="submit" value="提交" />
 </form>
 <script type="text/javascript">
+$(document).ready(function(){
+	$("form").click(function(event){
+		alert("Thanks for visiting!");
+	});
+});
 </script>
 </body>
 </html>
