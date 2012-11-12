@@ -27,11 +27,7 @@ var ds = new Miso.Dataset({
 	url : 'datads.csv',
 	delimiter : ','
 });
-ds.fetch({
-	success : function() {
-		this.add({email : "claliu"});
-	}
-});
+ds.add({email : "claliu"});
 /*
 $(document).ready(function(){
 	$('#collection').submit(function(){
