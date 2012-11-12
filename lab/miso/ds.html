@@ -16,14 +16,15 @@
 <!-- Library Version v1.0.0 -->
 </head>
 <body>
-<form id="collection" action="" method="POST">
+<form id="collection">
 电子邮件: <input type="text" name="email" id="email" value="" />
 <input type="submit" value="提交" />
 </form>
 <script type="text/javascript">
 $(document).ready(function(){
-	$("email").click(function(event){
-		alert("Thanks for visiting!");
+	$('form').submit(function(){
+		var email = $('email').val();
+		alert(email);
 	});
 });
 </script>
