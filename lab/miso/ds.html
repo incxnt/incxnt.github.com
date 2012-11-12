@@ -16,16 +16,18 @@
 <!-- Library Version v1.0.0 -->
 </head>
 <body>
+<!--
 <form id="collection">
 电子邮件: <input type="text" name="email" id="email" value="" />
 <input type="submit" value="提交" />
 </form>
+-->
 <script type="text/javascript">
-window.onload({
 var ds = new Miso.Dataset({
 	url : 'datads.csv',
 	delimiter : ','
 });
+window.onload({
 ds.fetch({
 	success : function() {
 		this.add({email : 'claliu@gmail.com'});
