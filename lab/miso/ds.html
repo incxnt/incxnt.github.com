@@ -27,7 +27,9 @@ var ds = new Miso.Dataset({
 	url : 'datads.csv',
 	delimiter : ','
 });
-ds.add(["claliu"]);
+ds.fetch({
+	success : function() {console.log(this.columnNames)}
+});
 /*
 $(document).ready(function(){
 	$('#collection').submit(function(){
