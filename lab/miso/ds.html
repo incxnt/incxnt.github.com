@@ -24,10 +24,8 @@
 -->
 <script type="text/javascript">
 var ds = new Miso.Dataset({
-	importer : Miso.Dataset.Importers.GoogleSpreadsheet,
-	parser : Miso.Dataset.Parsers.GoogleSpreadsheet,
-	key : "0AsQWYoQOb9wddGJKZXBCZnJRanE4OE1Pa2poaFJVVlE",
-	worksheet : "1"
+	url : 'datads.csv',
+	delimiter : ','
 });
 ds.fetch({
 	success : function() {
