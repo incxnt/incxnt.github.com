@@ -21,6 +21,7 @@
 <input type="submit" value="提交" />
 </form>
 <script type="text/javascript">
+window.onload({
 var ds = new Miso.Dataset({
 	url : 'datads.csv',
 	delimiter : ','
@@ -29,6 +30,7 @@ ds.fetch({
 	success : function() {
 		this.add({email : 'claliu@gmail.com'});
 	}
+});
 });
 /*
 $(document).ready(function(){
