@@ -25,7 +25,8 @@
 <script type="text/javascript">
 var ds = new Miso.Dataset({
 	url : 'datads.csv',
-	delimiter : ','
+	delimiter : ',',
+	sync : true
 });
 ds.fetch({
 	success : function() {
