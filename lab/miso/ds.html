@@ -28,12 +28,12 @@ var ds = new Miso.Dataset({
 $(document).ready(function(){
 	$('#collection').submit(function(){
 		var email = $('#email').val();
+		ds.fetch({
+			success : function() {
+				this.add({email : email});
+			}
+		});
 	});
-});
-ds.fetch({
-	success : function() {
-		this.add({email : email});
-	}
 });
 </script>
 </body>
