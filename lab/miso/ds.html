@@ -28,7 +28,11 @@ var ds = new Miso.Dataset({
 	delimiter : ','
 });
 ds.fetch({
-	success : function() {console.log(this.columnNames)}
+	success : function() {
+		this.add({
+			email : 999
+		});
+	}
 });
 /*
 $(document).ready(function(){
