@@ -26,13 +26,14 @@
 var ds = new Miso.Dataset({
 	url : 'datads.csv',
 	delimiter : ',',
+	resetOnFetch : true,
 	// sync : true
 });
 ds.fetch({
 	success : function() {
 		this.add({
 			id : 1,
-			email : 999
+			number : 1
 		});
 	}
 });
