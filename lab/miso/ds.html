@@ -27,12 +27,10 @@ var ds = new Miso.Dataset({
 	url : 'datads.csv',
 	delimiter : ','
 });
-window.onload({
 ds.fetch({
 	success : function() {
 		this.add({email : 'claliu@gmail.com'});
 	}
-});
 });
 /*
 $(document).ready(function(){
