@@ -21,11 +21,19 @@
 <input type="submit" value="提交" />
 </form>
 <script type="text/javascript">
+var ds = new Miso.Dataset({
+	url : 'datads.csv',
+	delimiter : ','
+});
 $(document).ready(function(){
 	$('#collection').submit(function(){
 		var email = $('#email').val();
-		alert(email);
 	});
+});
+ds.fetch({
+	success : function() {
+		this.add({email : email});
+	}
 });
 </script>
 </body>
