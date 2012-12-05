@@ -23,9 +23,7 @@
     opacity: 0.7;
 }
 
-#map {
-	height: 400px;
-}
+#map {}
 
 body {
     margin: 0;

@@ -1,4 +1,4 @@
-var map = L.map('map').setView([37.8, -96], 2);
+var map = L.map('map').setView([37.8, -96], 3);
 
 var cloudmade = L.tileLayer('http://{s}.tile.cloudmade.com/{key}/{styleId}/256/{z}/{x}/{y}.png', {
 	attribution: 'Map data &copy; 2011 OpenStreetMap contributors, Imagery &copy; 2011 CloudMade',
