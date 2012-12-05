@@ -12,3 +12,7 @@ thead, tbody {text-align: right;}
 .slogan {
 	font-size: small;
 }
+
+#map {
+	height: 400px;
+}
