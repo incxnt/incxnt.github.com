@@ -6,7 +6,8 @@ var cloudmade = L.tileLayer('http://{s}.tile.cloudmade.com/{key}/{styleId}/256/{
 	styleId: 22677
 }).addTo(map);
 
-L.geoJson(statesData, {style: style}).addTo(map);
+var geojson;
+geojson = L.geoJson(statesData, {style: style}).addTo(map);
 
 function getColor(d) {
     return d > 1000 ? '#800026' :
@@ -43,4 +44,8 @@ function highlightFeature(e) {
     if (!L.Browser.ie && !L.Browser.opera) {
         layer.bringToFront();
     }
+}
+
+function resetHighlight(e) {
+    geojson.resetStyle(e.target);
 }
