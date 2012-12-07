@@ -8,6 +8,6 @@
 .slogan, .footer {
 	font-size: small;
 }
-#xheader {
+#xheader, #xfooter {
 	margin-top: 10px;
 }
