@@ -1,18 +1,6 @@
-article, section, aside, hgroup, nav, header, footer, figure, figcaption {display: block;}
-body {margin: 0;}
-a {text-decoration: none;}
-thead, tbody {text-align: right;}
-#paper {width: 600px; margin-right: auto; margin-left: auto;}
-
-
-
 .logo {
 	color: red;
 }
 .slogan {
 	font-size: small;
-}
-
-#map {
-	height: 400px;
 }
