@@ -1,8 +1,11 @@
+.xnt {
+	color: red;
+}
 .logo {
 	color: red;
 	font-size: medium;
 }
-.slogan {
+.slogan, .footer {
 	font-size: small;
 }
 #xheader {
