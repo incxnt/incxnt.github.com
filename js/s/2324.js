@@ -1,13 +1,31 @@
-var map = L.map('map').setView([37.8, -96], 4);
+var cloudmadeKey = 'e6e22dcc8e474b679084e83b0a0845fc';
+var cloudmadeStyle = 22677;
+var cloudmadeUrl = 'http://{s}.tile.cloudmade.com/' + cloudmadeKey + '/' + cloudmadeStyle + '/256/{z}/{x}/{y}.png';
+var cloudmadeMap = new L.tileLayer(cloudmadeUrl);
+
+var mapCenter = new L.LatLng(35.86166, 104.195397);
+var initZoom = 2;
+var minZoom = 2;
+var maxZoom = 2;
+var map = new L.map('map', {
+    attributionControl: false,
+    center: mapCenter,
+    zoom: initZoom,
+    minZoom: minZoom,
+    maxZoom: maxZoom,
+    layers: [cloudmadeMap]
+});
+/*
+var map = L.map('map').setView([35.86166, 104.195397], 4);
 
 var cloudmade = L.tileLayer('http://{s}.tile.cloudmade.com/{key}/{styleId}/256/{z}/{x}/{y}.png', {
-	attribution: 'Map data &copy; 2011 OpenStreetMap contributors, Imagery &copy; 2011 CloudMade',
 	key: 'e6e22dcc8e474b679084e83b0a0845fc',
 	styleId: 22677
 }).addTo(map);
+*/
 
 var geojson;
-geojson = L.geoJson(statesData, {
+geojson = L.geoJson(provinceData, {
 	style: style,
 	onEachFeature: onEachFeature
 }).addTo(map);
