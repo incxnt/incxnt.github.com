@@ -29,7 +29,7 @@ info.onAdd = function (map) {
     return this._div;
 };
 info.update = function (props) {
-    this._div.innerHTML = '<h4>China Population Density</h4>' +  (props ?
+    this._div.innerHTML = '<h4>Population Density</h4>' +  (props ?
         '<b>' + props.name + '</b><br />' + props.density + ' people / km<sup>2</sup>'
         : 'Hover over a province');
 };
