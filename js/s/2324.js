@@ -16,7 +16,6 @@ var map = new L.map('map', {
     layers: [cloudmadeMap]
 });
 
-//var geojson;
 var geojson = L.geoJson(provinceData, {
 	style: style,
 	onEachFeature: onEachFeature
@@ -24,18 +23,15 @@ var geojson = L.geoJson(provinceData, {
 
 
 var info = L.control();
-
 info.onAdd = function (map) {
-    this._div = L.DomUtil.create('div', 'info'); // create a div with a class "info"
+    this._div = L.DomUtil.create('div', 'info');
     this.update();
     return this._div;
 };
-
-// method that we will use to update the control based on feature properties passed
 info.update = function (props) {
-    this._div.innerHTML = '<h4>US Population Density</h4>' +  (props ?
-        '<b>' + props.name + '</b><br />' + props.density + ' people / mi<sup>2</sup>'
-        : 'Hover over a state');
+    this._div.innerHTML = '<h4>中国人口密度</h4>' +  (props ?
+        '<b>' + props.name + '</b><br />' + props.density + ' people / km<sup>2</sup>'
+        : 'Hover over a province');
 };
 
 info.addTo(map);
