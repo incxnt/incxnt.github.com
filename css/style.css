@@ -3,11 +3,9 @@
 }
 .logo {
 	color: red;
-	font-size: medium;
+	font-size: large;
 }
-.slogan {
-	font-size: small;
-}
+.slogan {}
 #xheader, #xfooter {
 	margin-top: 10px;
 }
