@@ -15,17 +15,9 @@ var map = new L.map('map', {
     maxZoom: maxZoom,
     layers: [cloudmadeMap]
 });
-/*
-var map = L.map('map').setView([35.86166, 104.195397], 4);
 
-var cloudmade = L.tileLayer('http://{s}.tile.cloudmade.com/{key}/{styleId}/256/{z}/{x}/{y}.png', {
-	key: 'e6e22dcc8e474b679084e83b0a0845fc',
-	styleId: 22677
-}).addTo(map);
-*/
-
-var geojson;
-geojson = L.geoJson(provinceData, {
+//var geojson;
+var geojson = L.geoJson(provinceData, {
 	style: style,
 	onEachFeature: onEachFeature
 }).addTo(map);
