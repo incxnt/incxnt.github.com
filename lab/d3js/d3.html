@@ -14,19 +14,26 @@
 	</style>
 </head>
 <body>
-	<svg width="500px" height="50px">
-		<circle cx="25" cy="25" r="20"
-        	fill="rgba(128, 0, 128, 0.75)" 
-        	stroke="rgba(0, 255, 0, 0.25)" stroke-width="10"/>
-		<circle cx="75" cy="25" r="20"
-        	fill="rgba(0, 255, 0, 0.75)"
-        	stroke="rgba(0, 0, 255, 0.25)" stroke-width="10"/>
-		<circle cx="125" cy="25" r="20"
-        	fill="rgba(255, 255, 0, 0.75)"
-        	stroke="rgba(255, 0, 0, 0.25)" stroke-width="10"/>
-	</svg>
 	<script src="/js/d3-2.10.3/d3.v2.min.js"></script>
 	<script type="text/javascript">
+		var dataset = [ 5, 10, 15, 20, 25 ];
+		var w = 500;
+		var h = 50;
+		var svg = d3.select("body")
+            		.append("svg")
+            		.attr("width", w)   // <-- Here
+            		.attr("height", h); // <-- and here!
+		var circles = svg.selectAll("circle")
+                 		.data(dataset)
+                 		.enter()
+                 		.append("circle");
+		circles.attr("cx", function(d, i) {
+            return (i * 50) + 25;
+		})
+		.attr("cy", h/2)
+		.attr("r", function(d) {
+			return d;
+		});
 	</script>
 </body>
 </html>
