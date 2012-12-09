@@ -16,9 +16,11 @@
 <body>
 	<script src="/js/d3-2.10.3/d3.v2.min.js"></script>
 	<script type="text/javascript">
-		var dataset = [ 25, 7, 5, 26, 11, 8, 25, 14, 23, 19,
-			14, 11, 22, 29, 11, 13, 12, 17, 18, 10,
-			24, 18, 25, 9, 3 ];
+		var dataset = [];                        //Initialize empty array
+		for (var i = 0; i < 25; i++) {           //Loop 25 times
+    		var newNumber = Math.random() * 30;  //New random number (0-30)
+    		dataset = dataset.concat(newNumber); //Add new number to array
+		}
 		d3.select("body").selectAll("div")
     		.data(dataset)
     		.enter()
