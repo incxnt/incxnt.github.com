@@ -32,10 +32,12 @@
             .attr("x", function(d, i) {
                     return i * (w / dataset.length);
                 })
-            .attr("y", 0)
+            .attr("y", function(d) {
+                    return h - d;  //Height minus data value
+                })
             .attr("width", w / dataset.length - barPadding)
             .attr("height", function(d) {
-                    return d * 4;
+                    return d * 4;  //Just the data value
             });
 	</script>
 </body>
