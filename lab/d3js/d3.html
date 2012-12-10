@@ -23,7 +23,7 @@
 
 			var yScale = d3.scale.linear()
 								 .domain([0, d3.max(dataset, function(d) { return d[1]; })])
-								 .range([0, h]);
+								 .range([h, 0]);
 	
 			//Create SVG element
 			var svg = d3.select("body")
