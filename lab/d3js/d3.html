@@ -78,7 +78,7 @@ for (var i = 0; i < numDataPoints; i++) {
 			  .attr("r", function(d) {
                     return rScale(d[1]);
                 });
-
+/*
 			svg.selectAll("text")
 			   .data(dataset)
 			   .enter()
@@ -95,7 +95,7 @@ for (var i = 0; i < numDataPoints; i++) {
 			   .attr("font-family", "sans-serif")
 			   .attr("font-size", "11px")
 			   .attr("fill", "red");
-        
+*/        
             svg.append("g")
                 .attr("class", "axis")
                 .attr("transform", "translate(0," + (h - padding) + ")")
