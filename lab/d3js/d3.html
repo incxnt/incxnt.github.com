@@ -57,6 +57,13 @@
                                     + "translate(" + outerRadius + ",0)";
                             });
         
+        ticks.append("line")
+                .attr("x1", 1)
+                .attr("y1", 0)
+                .attr("x2", 5)
+                .attr("y2", 0)
+                .style("stroke", "#000");
+        
         // Returns an array of tick angles and labels, given a group.
         function groupTicks(d) {
                 var k = (d.endAngle - d.startAngle) / d.value;
