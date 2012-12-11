@@ -47,6 +47,16 @@
                         .on("mouseover", fade(.1))
                         .on("mouseout", fade(1)); 
         
+        var ticks = svg.append("g").selectAll("g")
+                        .data(chord.groups)
+                        .enter().append("g").selectAll("g")
+                        .data(groupTicks)
+                        .enter().append("g")
+                        .attr("transform", function(d) {
+                                return "rotate(" + (d.angle * 180 / Math.PI - 90) + ")"
+                                    + "translate(" + outerRadius + ",0)";
+                            });
+        
         // Returns an array of tick angles and labels, given a group.
         function groupTicks(d) {
                 var k = (d.endAngle - d.startAngle) / d.value;
