@@ -35,7 +35,7 @@
                             // stop the importer.
                             this.importer.stop();
                             // output our current collection of tweets
-                            console.log(ds.column("bounding_box").data);
+                            console.log(ds.column("id").data);
                         }
                         // update the number of rows we now have.
                         console.log(madeRequests, ds.length);
