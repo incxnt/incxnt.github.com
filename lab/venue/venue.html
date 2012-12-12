@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+    <html lang="zh-CN">
+        <head>
+            <meta charset="UTF-8">
+            <title></title>
+        </head>
+        <body>
+            <script src="/js/dataset-0.4.1/dist/miso.ds.deps.ie.min.0.4.1.js"></script>
+            <script>
+                var requests = 2;
+                var madeRequests = 0;
+                
+                var ds = new Miso.Dataset({
+                    url: "https://api.foursquare.com/v2/venues/trending?ll=40.7,-74&oauth_token=JFP40RSEHFNOI2PMAKOHIIQQLZCRTUTX3JURLQDOWS4VZOWP&v=20121212",
+                    interval: 1000,
+                    jsonp: true,
+                    resetOnFetch: true,
+                    extract: function(data) {
+                        return data.venues;
+                    }
+                });
+                
+                ds.fetch({
+                    success: function() {
+                        madeRequests++;
+                        if (madeRequests >= requests) {
+                            this.importer.stop();
+                            console.log(ds.column("id").data);
+                        }
+                        console.log(madeRequests, ds.length);
+                    }
+                });
+            </script>
+        </body>
+    </html>
