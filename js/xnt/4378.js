@@ -33,3 +33,8 @@ var airports = L.geoJson(airports);
 markers.addLayer(airports);
 markers.addTo(map);
 info.addTo(map);
+
+
+function onEachFeature(feature, layer) {
+    layer.bindPopup(feature.properties.name + ' ' + feature.properties.iata_code);
+}
