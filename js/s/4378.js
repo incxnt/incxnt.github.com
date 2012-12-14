@@ -20,7 +20,7 @@ var airports = L.geoJson(airports);
 
 var info = L.control();
 info.onAdd = function (map) {
-    this._div = L.DomUtil.create('div', 'info');
+    this._div = L.DomUtil.create('div', 'map-info');
     this.update();
     return this._div;
 };
