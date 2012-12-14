@@ -1,7 +1,7 @@
-.xnt a {
+a.xnt {
     text-decoration: none;
 }
-.xnt a:hover {
+a:hover.xnt {
     color: red;
 }
 .xnt {
