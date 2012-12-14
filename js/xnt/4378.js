@@ -6,7 +6,7 @@ var cloudmadeMap = new L.tileLayer(cloudmadeUrl);
 var mapCenter = new L.LatLng(33, 0);
 var initZoom = 2;
 var minZoom = 2;
-var maxZoom = 6;
+var maxZoom = 7;
 var map = new L.map('map', {
     attributionControl: false,
     center: mapCenter,
@@ -40,7 +40,7 @@ info.addTo(map);
 function onEachFeature(feature, layer) {
     layer.bindPopup(
         '<a href="' + feature.properties.wikipedia + '" target="' + '_blank">' +
-        + feature.properties.iata_code
+        + feature.properties.name
         + '</a> '
         + feature.properties.iata_code);
 }
