@@ -38,5 +38,9 @@ info.addTo(map);
 
 
 function onEachFeature(feature, layer) {
-    layer.bindPopup(feature.properties.iata_code);
+    layer.bindPopup(
+        '<a href="' + feature.properties.wikipedia + '" target="' + '_blank">' +
+        + feature.properties.iata_code
+        + '</a> '
+        + feature.properties.iata_code);
 }
