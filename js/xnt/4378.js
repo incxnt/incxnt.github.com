@@ -16,8 +16,6 @@ var map = new L.map('map', {
     layers: [cloudmadeMap]
 });
 
-var airports = L.geoJson(airports);
-
 var info = L.control();
 info.onAdd = function (map) {
     this._div = L.DomUtil.create('div', 'map-info');
@@ -29,5 +27,8 @@ info.update = function () {
 };
 
 
-airports.addTo(map);
+var markers = new L.MarkerClusterGroup();
+var airports = L.geoJson(airports);
+
+markers.addLayer(airports);
 info.addTo(map);
