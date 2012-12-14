@@ -5,7 +5,7 @@ var cloudmadeMap = new L.tileLayer(cloudmadeUrl);
 
 var mapCenter = new L.LatLng(33, 0);
 var initZoom = 2;
-var minZoom = 1;
+var minZoom = 2;
 var maxZoom = 6;
 var map = new L.map('map', {
     attributionControl: false,
@@ -16,8 +16,7 @@ var map = new L.map('map', {
     layers: [cloudmadeMap]
 });
 
-var geojson = L.geoJson(airports).addTo(map);
-
+var airports = L.geoJson(airports);
 
 var info = L.control();
 info.onAdd = function (map) {
@@ -25,9 +24,10 @@ info.onAdd = function (map) {
     this.update();
     return this._div;
 };
-info.update = function (props) {
-    this._div.innerHTML = '<h4>Population Density</h4>' +  (props ?
-        '<b>' + props.name + '</b><br />' + props.density + ' people / km<sup>2</sup>'
-        : 'Hover over a province');
+info.update = function () {
+    this._div.innerHTML = '<h4>Worldwide Airports</h4>';
 };
+
+
+airports.addTo(map);
 info.addTo(map);
