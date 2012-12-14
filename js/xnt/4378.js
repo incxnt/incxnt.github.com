@@ -31,5 +31,5 @@ var markers = new L.MarkerClusterGroup();
 var airports = L.geoJson(airports);
 
 markers.addLayer(airports);
-marker.addTo(map);
+markers.addTo(map);
 info.addTo(map);
