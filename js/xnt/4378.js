@@ -28,7 +28,9 @@ info.update = function () {
 
 
 var markers = new L.MarkerClusterGroup();
-var airports = L.geoJson(airports);
+var airports = L.geoJson(airports, {
+    onEachFeature: onEachFeature
+});
 
 markers.addLayer(airports);
 markers.addTo(map);
