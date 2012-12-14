@@ -38,5 +38,5 @@ info.addTo(map);
 
 
 function onEachFeature(feature, layer) {
-    layer.bindPopup(feature.properties.name + ' ' + feature.properties.iata_code);
+    layer.bindPopup(feature.properties.iata_code);
 }
