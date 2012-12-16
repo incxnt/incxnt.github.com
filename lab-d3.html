@@ -10,9 +10,12 @@
         <script>
             var w = 360,
                 h = 180;
+            
             var svg = d3.select("#d3").append("svg")
                         .attr("width", w)
                         .attr("height", h);
+            
+            var circle = svg.selectAll("circle");
         </script>
     </body>
 </html>
