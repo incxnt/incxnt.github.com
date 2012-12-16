@@ -15,10 +15,12 @@
                         .attr("width", w)
                         .attr("height", h);
             
-            var circle = svg.selectAll("circle");
-            circle.style("fill", "steelblue");
-            circle.attr("cy", 90);
-            circle.attr("r", 30);
+            svg.selectAll("circle")
+                .data([32, 57, 112, 293])
+                .enter().append("circle")
+                .attr("cy", 90)
+                .attr("cx", String)
+                .attr("r", Math.sqrt);
         </script>
     </body>
 </html>
