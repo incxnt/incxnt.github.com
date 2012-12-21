@@ -25,8 +25,10 @@
             
             var chart = d3.select("body").append("svg")
                             .attr("class", "chart")
-                            .attr("width", 420)
-                            .attr("height", 20 * data.length);
+                            .attr("width", 440)
+                            .attr("height", 140)
+                            .append("g")
+                            .attr("transform", "translate(10,15)");
             
             chart.selectAll("rect")
                     .data(data)
