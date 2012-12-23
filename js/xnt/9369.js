@@ -17,6 +17,8 @@ var map = new L.map('map', {
     layers: [cloudmadeMap]
 });
 
+
+
 var info = L.control();
 info.onAdd = function (map) {
     this._div = L.DomUtil.create('div', 'map-info');
@@ -29,8 +31,13 @@ info.update = function () {
 info.addTo(map);
 
 
-
+var beijingStyle = {
+    "color": "#ff7800",
+    "weight": 5,
+    "opacity": 0.65
+};
 var beijing = L.geoJson(beijing, {
+    style: beijingStyle,
     onEachFeature: onEachFeature
 });
 beijing.addTo(map);
