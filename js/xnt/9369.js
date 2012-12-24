@@ -35,7 +35,7 @@ info.addTo(map);
 var beijingStyle = {
     fillColor: '#0000FF',
     fillOpacity: 0.5,
-    dashArray: '1',
+    dashArray: '5',
     color: '#F0FFFF',
     opacity: 1,
     weight: 2
