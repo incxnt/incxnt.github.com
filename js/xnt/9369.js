@@ -33,12 +33,12 @@ info.addTo(map);
 
 
 var beijingStyle = {
-    fillOpacity: 0.1,
+    fillColor: '#B22222',
+    fillOpacity: 0.3,
     dashArray: '3',
     color: '#F0FFFF',
     opacity: 1,
-    weight: 2,
-    fillColor: '#B22222'
+    weight: 2
 };
 var beijing = L.geoJson(beijing, {
     style: beijingStyle,
