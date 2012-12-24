@@ -31,6 +31,7 @@ info.update = function () {
 info.addTo(map);
 
 
+
 var beijingStyle = {
     "color": "#ff7800",
     "weight": 5,
