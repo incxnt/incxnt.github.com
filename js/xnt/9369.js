@@ -42,8 +42,7 @@ var style = {
     clickable: false
 };
 var location = L.geoJson(location, {
-    style: style,
-    onEachFeature: onEachFeature
+    style: style
 });
 location.addTo(map);
 
