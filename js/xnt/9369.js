@@ -31,7 +31,7 @@ info.update = function () {
 info.addTo(map);
 
 
-
+var beijing;
 var beijingStyle = {
     fillColor: '#0000FF',
     fillOpacity: 0.5,
@@ -41,7 +41,7 @@ var beijingStyle = {
     dashArray: '5',
     clickable: false
 };
-var beijing = L.geoJson(beijing, {
+beijing = L.geoJson(beijing, {
     style: beijingStyle
 });
 beijing.addTo(map);
@@ -64,4 +64,9 @@ function highlightFeature(e) {
     if (!L.Browser.ie && !L.Browser.opera) {
         layer.bringToFront();
     }
+}
+
+
+function resetHighlight(e) {
+    geojson.resetStyle(e.target);
 }
