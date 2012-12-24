@@ -31,7 +31,7 @@ info.update = function () {
 info.addTo(map);
 
 
-var location;
+
 var style = {
     fillColor: '#0000FF',
     fillOpacity: 0.5,
@@ -41,7 +41,7 @@ var style = {
     dashArray: '5',
     clickable: false
 };
-location = L.geoJson(location, {
+var location = L.geoJson(location, {
     style: style,
     onEachFeature: onEachFeature
 });
