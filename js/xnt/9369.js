@@ -33,7 +33,8 @@ info.addTo(map);
 
 
 var beijingStyle = {
-    fillOpacity: 0
+    fillOpacity: 0.1,
+    dashArray: '3'
 };
 var beijing = L.geoJson(beijing, {
     style: beijingStyle,
