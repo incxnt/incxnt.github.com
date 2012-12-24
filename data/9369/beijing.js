@@ -1,4 +1,4 @@
-var beijing = {
+var location = {
 "type": "FeatureCollection",
                                                                                 
 "features": [
