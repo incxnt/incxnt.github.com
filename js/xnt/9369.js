@@ -35,14 +35,13 @@ info.addTo(map);
 var beijingStyle = {
     fillColor: '#0000FF',
     fillOpacity: 0.5,
-    dashArray: '5',
     color: '#F0FFFF',
     opacity: 1,
-    weight: 2
+    weight: 2,
+    dashArray: '5'
 };
 var beijing = L.geoJson(beijing, {
-    style: beijingStyle,
-    onEachFeature: onEachFeature
+    style: beijingStyle
 });
 beijing.addTo(map);
 
@@ -50,6 +49,18 @@ beijing.addTo(map);
 
 
 
-function onEachFeature(feature, layer) {
-    layer.bindPopup(feature.properties.NAME_3);
+
+function highlightFeature(e) {
+    var layer = e.target;
+
+    layer.setStyle({
+        weight: 5,
+        color: '#666',
+        dashArray: '',
+        fillOpacity: 0.7
+    });
+
+    if (!L.Browser.ie && !L.Browser.opera) {
+        layer.bringToFront();
+    }
 }
