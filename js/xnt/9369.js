@@ -38,7 +38,8 @@ var beijingStyle = {
     color: '#F0FFFF',
     opacity: 1,
     weight: 2,
-    dashArray: '5'
+    dashArray: '5',
+    clickable: false
 };
 var beijing = L.geoJson(beijing, {
     style: beijingStyle
