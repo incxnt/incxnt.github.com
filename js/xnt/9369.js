@@ -50,7 +50,7 @@ location.addTo(map);
 
 
 
-
+/*
 function highlightFeature(e) {
     var layer = e.target;
 
@@ -78,3 +78,4 @@ function onEachFeature(feature, layer) {
         mouseout: resetHighlight
     });
 }
+*/
