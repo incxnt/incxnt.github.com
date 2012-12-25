@@ -1,4 +1,4 @@
-var beijingChina = {
+var beijing = {
 "type": "FeatureCollection",
                                                                                 
 "features": [
