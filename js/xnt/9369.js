@@ -41,7 +41,7 @@ var style = {
     dashArray: '5',
     clickable: false
 };
-var location = L.geoJson(beijing, {
+var location = L.geoJson(provinceData, {
     style: style
 });
 location.addTo(map);
