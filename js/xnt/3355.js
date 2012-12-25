@@ -66,12 +66,13 @@ function getColor(d) {
 
 function style(feature) {
     return {
-        fillColor: getColor(feature.properties.density),
-        weight: 2,
+        fillColor: '#0000FF',
+        fillOpacity: 0.5,
+        color: '#F0FFFF',
         opacity: 1,
-        color: 'white',
-        dashArray: '3',
-        fillOpacity: 0.7
+        weight: 2,
+        dashArray: '5',
+        clickable: false
     };
 }
 
