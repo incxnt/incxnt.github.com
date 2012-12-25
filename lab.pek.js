@@ -1,4 +1,4 @@
-var provinceData = {
+var beijing = {
 "type": "FeatureCollection",
                                                                                 
 "features": [

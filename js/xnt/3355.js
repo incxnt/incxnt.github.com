@@ -16,7 +16,7 @@ var map = new L.map('map', {
     layers: [cloudmadeMap]
 });
 
-var geojson = L.geoJson(provinceData, {
+var geojson = L.geoJson(beijing, {
 	style: style,
 	onEachFeature: onEachFeature
 }).addTo(map);
