@@ -36,6 +36,7 @@ info.update = function (props) {
 info.addTo(map);
 
 
+/*
 var legend = L.control({position: 'bottomright'});
 legend.onAdd = function (map) {
     var div = L.DomUtil.create('div', 'info legend'),
@@ -49,10 +50,12 @@ legend.onAdd = function (map) {
     return div;
 };
 legend.addTo(map);
+*/
+    
 
 
 
-
+/*
 function getColor(d) {
     return d > 1000 ? '#800026' :
            d > 500  ? '#BD0026' :
@@ -63,6 +66,7 @@ function getColor(d) {
            d > 10   ? '#FED976' :
                       '#FFEDA0';
 }
+*/
 
 function style(feature) {
     return {
