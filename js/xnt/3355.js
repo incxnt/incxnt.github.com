@@ -35,26 +35,6 @@ info.update = function (props) {
 info.addTo(map);
 
 
-/*
-var legend = L.control({position: 'bottomright'});
-legend.onAdd = function (map) {
-    var div = L.DomUtil.create('div', 'info legend'),
-        grades = [0, 10, 20, 50, 100, 200, 500, 1000],
-        labels = [];
-    for (var i = 0; i < grades.length; i++) {
-        div.innerHTML +=
-            '<i style="background:' + getColor(grades[i] + 1) + '"></i> ' +
-            grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '<br>' : '+');
-    }
-    return div;
-};
-legend.addTo(map);
-*/
-    
-
-
-
-
 function getColor(id) {
     switch (id) {
             case 78: Color = '#A6CEE3'; break;
@@ -71,7 +51,6 @@ function getColor(id) {
     }
     return Color;
 }
-
 
 function style(feature) {
     return {
@@ -105,8 +84,6 @@ function resetHighlight(e) {
     geojson.resetStyle(e.target);
     info.update();
 }
-
-
 
 function onEachFeature(feature, layer) {
     layer.on({
