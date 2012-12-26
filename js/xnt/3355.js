@@ -55,22 +55,25 @@ legend.addTo(map);
 
 
 
-/*
-function getColor(d) {
-    return d > 1000 ? '#800026' :
-           d > 500  ? '#BD0026' :
-           d > 200  ? '#E31A1C' :
-           d > 100  ? '#FC4E2A' :
-           d > 50   ? '#FD8D3C' :
-           d > 20   ? '#FEB24C' :
-           d > 10   ? '#FED976' :
-                      '#FFEDA0';
+
+function getColor(name) {
+    return name = 'Beijing' ? '#A6CEE3' :
+           name = 'Changping'  ? '#1F78B4' :
+           name = 'Daxing'  ? '#B2DF8A' :
+           name = 'Fangshan'  ? '#33A02C' :
+           name = 'Huairou'   ? '#FB9A99' :
+           name = 'Mentougou'   ? '#E31A1C' :
+           name = 'Miyun'   ? '#FDBF6F' :
+           name = 'Pinggu'  ? '#FF7F00' :
+           name = 'Shunyi'  ? '#CAB2D6' :
+           name = 'Tongzhou'    ? '#6A3D9A' :
+           name = 'Yanqing' ? '#FFFF99';
 }
-*/
+
 
 function style(feature) {
     return {
-        fillColor: '#0000FF',
+        fillColor: getColor(feature.properties.NAME_3),
         fillOpacity: 0.5,
         color: '#F0FFFF',
         opacity: 1,
