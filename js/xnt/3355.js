@@ -29,7 +29,7 @@ info.onAdd = function (map) {
 };
 info.update = function (props) {
     this._div.innerHTML = '<h4>Beijing</h4>' +  (props ?
-        '<b>' + props.name_3 + '</b><br />'
+        '<b>' + props.name + '</b><br />'
         : 'Hover over the map');
 };
 info.addTo(map);
