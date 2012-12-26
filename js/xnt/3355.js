@@ -16,7 +16,7 @@ var map = new L.map('map', {
     layers: [cloudmadeMap]
 });
 
-// var geojson;
+
 
 var geojson = L.geoJson(beijing, {
 	style: style,
@@ -84,7 +84,6 @@ function style(feature) {
         opacity: 1,
         weight: 2,
         dashArray: '5'
-//        clickable: false
     };
 }
 
@@ -110,23 +109,11 @@ function resetHighlight(e) {
 //    info.update();
 }
 
-/*
-function zoomToFeature(e) {
-    map.fitBounds(e.target.getBounds());
-}
-*/
+
 
 function onEachFeature(feature, layer) {
     layer.on({
         mouseover: highlightFeature,
         mouseout: resetHighlight
-//        click: zoomToFeature
     });
 }
-
-/*
-geojson = L.geoJson(beijing, {
-	style: style,
-	onEachFeature: onEachFeature
-}).addTo(map);
-*/
