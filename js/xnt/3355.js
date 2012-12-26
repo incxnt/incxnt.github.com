@@ -16,11 +16,13 @@ var map = new L.map('map', {
     layers: [cloudmadeMap]
 });
 
+var geojson;
+/*
 var geojson = L.geoJson(beijing, {
 	style: style,
 	onEachFeature: onEachFeature
 }).addTo(map);
-
+*/
 
 var info = L.control();
 info.onAdd = function (map) {
@@ -100,22 +102,31 @@ function highlightFeature(e) {
         layer.bringToFront();
     }
 
-    info.update(layer.feature.properties);
+//    info.update(layer.feature.properties);
 }
 
 function resetHighlight(e) {
     geojson.resetStyle(e.target);
-    info.update();
+//    info.update();
 }
 
+/*
 function zoomToFeature(e) {
     map.fitBounds(e.target.getBounds());
 }
+*/
 
 function onEachFeature(feature, layer) {
     layer.on({
         mouseover: highlightFeature,
-        mouseout: resetHighlight,
-        click: zoomToFeature
+        mouseout: resetHighlight
+//        click: zoomToFeature
     });
 }
+
+
+geojson = L.geoJson(beijing, {
+	style: style,
+	onEachFeature: onEachFeature
+}).addTo(map);
+
