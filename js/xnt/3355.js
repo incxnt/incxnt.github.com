@@ -29,8 +29,8 @@ info.onAdd = function (map) {
 };
 info.update = function (props) {
     this._div.innerHTML = '<h4>Beijing</h4>' +  (props ?
-        '<b>' + props.NAME_3 + '</b><br />'
-        : 'Hover over a province');
+        '<b>' + props.name_3 + '</b><br />'
+        : 'Hover over the map');
 };
 info.addTo(map);
 
