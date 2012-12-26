@@ -75,7 +75,7 @@ function getColor(name) {
 
 function style(feature) {
     return {
-        fillColor: getColor(feature.properties.NAME_3),
+        fillColor: getColor(feature.properties.name),
         fillOpacity: 0.7,
         color: '#F0FFFF',
         opacity: 1,
