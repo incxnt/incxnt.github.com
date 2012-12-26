@@ -30,7 +30,7 @@ info.onAdd = function (map) {
 info.update = function (props) {
     this._div.innerHTML = '<h4>北京市</h4>' +  (props ?
         '<b>' + props.name + '</b><br />'
-        : 'Hover over the map');
+        : '在地图上滑动鼠标获取信息');
 };
 info.addTo(map);
 
