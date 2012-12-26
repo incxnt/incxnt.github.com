@@ -16,13 +16,10 @@ var map = new L.map('map', {
     layers: [cloudmadeMap]
 });
 
-
-
 var geojson = L.geoJson(beijing, {
 	style: style,
 	onEachFeature: onEachFeature
 }).addTo(map);
-
 
 var info = L.control();
 info.onAdd = function (map) {
@@ -31,8 +28,8 @@ info.onAdd = function (map) {
     return this._div;
 };
 info.update = function (props) {
-    this._div.innerHTML = '<h4>Population Density</h4>' +  (props ?
-        '<b>' + props.name + '</b><br />' + props.density + ' people / km<sup>2</sup>'
+    this._div.innerHTML = '<h4>Beijing</h4>' +  (props ?
+        '<b>' + props.NAME_3 + '</b><br />'
         : 'Hover over a province');
 };
 info.addTo(map);
