@@ -98,12 +98,12 @@ function highlightFeature(e) {
         layer.bringToFront();
     }
 
-//    info.update(layer.feature.properties);
+    info.update(layer.feature.properties);
 }
 
 function resetHighlight(e) {
     geojson.resetStyle(e.target);
-//    info.update();
+    info.update();
 }
 
 
