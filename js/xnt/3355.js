@@ -16,13 +16,13 @@ var map = new L.map('map', {
     layers: [cloudmadeMap]
 });
 
-var geojson;
-/*
+// var geojson;
+
 var geojson = L.geoJson(beijing, {
 	style: style,
 	onEachFeature: onEachFeature
 }).addTo(map);
-*/
+
 
 var info = L.control();
 info.onAdd = function (map) {
@@ -124,9 +124,9 @@ function onEachFeature(feature, layer) {
     });
 }
 
-
+/*
 geojson = L.geoJson(beijing, {
 	style: style,
 	onEachFeature: onEachFeature
 }).addTo(map);
-
+*/
