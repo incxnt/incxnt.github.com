@@ -71,28 +71,13 @@ function getColor(name) {
             case 'Yanqing': Color = '#FFFF99'; break;      
     }
     return Color;
-    
-    
-    /*
-    return name = 'Beijing' ? '#A6CEE3' :
-           name = 'Changping'  ? '#1F78B4' :
-           name = 'Daxing'  ? '#B2DF8A' :
-           name = 'Fangshan'  ? '#33A02C' :
-           name = 'Huairou'   ? '#FB9A99' :
-           name = 'Mentougou'   ? '#E31A1C' :
-           name = 'Miyun'   ? '#FDBF6F' :
-           name = 'Pinggu'  ? '#FF7F00' :
-           name = 'Shunyi'  ? '#CAB2D6' :
-           name = 'Tongzhou'    ? '#6A3D9A' :
-                            '#FFFF99';
-            */
 }
 
 
 function style(feature) {
     return {
         fillColor: getColor(feature.properties.NAME_3),
-        fillOpacity: 0.5,
+        fillOpacity: 0.7,
         color: '#F0FFFF',
         opacity: 1,
         weight: 2,
