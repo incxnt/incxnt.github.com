@@ -67,7 +67,7 @@ function getColor(name) {
            name = 'Pinggu'  ? '#FF7F00' :
            name = 'Shunyi'  ? '#CAB2D6' :
            name = 'Tongzhou'    ? '#6A3D9A' :
-           name = 'Yanqing' ? '#FFFF99';
+                            '#FFFF99';
 }
 
 
