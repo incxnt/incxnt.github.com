@@ -57,6 +57,23 @@ legend.addTo(map);
 
 
 function getColor(name) {
+    switch (name) {
+            case 'Beijing': Color = '#A6CEE3'; break;
+            case 'Changping': Color = '#1F78B4'; break;
+            case 'Daxing': Color = '#B2DF8A'; break;
+            case 'Fangshan': Color = '#33A02C'; break;
+            case 'Huairou': Color = '#FB9A99'; break;
+            case 'Mentougou': Color = '#E31A1C'; break;
+            case 'Miyun': Color = '#FDBF6F'; break;
+            case 'Pinggu': Color = '#FF7F00'; break;
+            case 'Shunyi': Color = '#CAB2D6'; break;
+            case 'Tongzhou': Color = '#6A3D9A'; break;
+            case 'Yanqing': Color = '#FFFF99'; break;      
+    }
+    return Color;
+    
+    
+    /*
     return name = 'Beijing' ? '#A6CEE3' :
            name = 'Changping'  ? '#1F78B4' :
            name = 'Daxing'  ? '#B2DF8A' :
@@ -68,6 +85,7 @@ function getColor(name) {
            name = 'Shunyi'  ? '#CAB2D6' :
            name = 'Tongzhou'    ? '#6A3D9A' :
                             '#FFFF99';
+            */
 }
 
 
