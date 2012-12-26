@@ -83,8 +83,8 @@ function style(feature) {
         color: '#F0FFFF',
         opacity: 1,
         weight: 2,
-        dashArray: '5',
-        clickable: false
+        dashArray: '5'
+//        clickable: false
     };
 }
 
