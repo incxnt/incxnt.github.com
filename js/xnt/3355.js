@@ -3,10 +3,10 @@ var cloudmadeStyle = 22677;
 var cloudmadeUrl = 'http://{s}.tile.cloudmade.com/' + cloudmadeKey + '/' + cloudmadeStyle + '/256/{z}/{x}/{y}.png';
 var cloudmadeMap = new L.tileLayer(cloudmadeUrl);
 
-var mapCenter = new L.LatLng(24.479834, 118.089425);
-var initZoom = 8;
-var minZoom = 8;
-var maxZoom = 11;
+var mapCenter = new L.LatLng(25, 118.089425);
+var initZoom = 10;
+var minZoom = 10;
+var maxZoom = 10;
 var map = new L.map('map', {
     attributionControl: false,
     center: mapCenter,
