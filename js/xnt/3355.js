@@ -6,7 +6,7 @@ var cloudmadeMap = new L.tileLayer(cloudmadeUrl);
 var mapCenter = new L.LatLng(24.479834, 118.089425);
 var initZoom = 8;
 var minZoom = 8;
-var maxZoom = 8;
+var maxZoom = 11;
 var map = new L.map('map', {
     attributionControl: false,
     center: mapCenter,
