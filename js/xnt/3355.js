@@ -3,7 +3,7 @@ var cloudmadeStyle = 22677;
 var cloudmadeUrl = 'http://{s}.tile.cloudmade.com/' + cloudmadeKey + '/' + cloudmadeStyle + '/256/{z}/{x}/{y}.png';
 var cloudmadeMap = new L.tileLayer(cloudmadeUrl);
 
-var mapCenter = new L.LatLng(40.25, 116.407526);
+var mapCenter = new L.LatLng(24.479834, 118.089425);
 var initZoom = 8;
 var minZoom = 8;
 var maxZoom = 8;
@@ -16,7 +16,7 @@ var map = new L.map('map', {
     layers: [cloudmadeMap]
 });
 
-var geojson = L.geoJson(beijing, {
+var geojson = L.geoJson(xiamen, {
 	style: style,
 	onEachFeature: onEachFeature
 }).addTo(map);
@@ -28,8 +28,8 @@ info.onAdd = function (map) {
     return this._div;
 };
 info.update = function (props) {
-    this._div.innerHTML = '<h4>北京市</h4>' +  (props ?
-        '<b>' + props.name + '</b><br />'
+    this._div.innerHTML = '<h4>厦门市</h4>' +  (props ?
+        '<b>' + props.NAME_3 + '</b><br />'
         : '在地图上滑动鼠标获取信息');
 };
 info.addTo(map);
@@ -37,24 +37,15 @@ info.addTo(map);
 
 function getColor(id) {
     switch (id) {
-            case 78: Color = '#A6CEE3'; break;
-            case 79: Color = '#1F78B4'; break;
-            case 80: Color = '#B2DF8A'; break;
-            case 81: Color = '#33A02C'; break;
-            case 82: Color = '#FB9A99'; break;
-            case 83: Color = '#E31A1C'; break;
-            case 84: Color = '#FDBF6F'; break;
-            case 85: Color = '#FF7F00'; break;
-            case 86: Color = '#CAB2D6'; break;
-            case 87: Color = '#6A3D9A'; break;
-            case 88: Color = '#FFFF99'; break;      
+            case 178: Color = '#E41A1C'; break;
+            case 179: Color = '#377EB8'; break;
     }
     return Color;
 }
 
 function style(feature) {
     return {
-        fillColor: getColor(feature.properties.id),
+        fillColor: getColor(feature.properties.ID_3),
         fillOpacity: 0.7,
         color: '#F0FFFF',
         opacity: 1,
