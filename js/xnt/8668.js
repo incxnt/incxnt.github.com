@@ -25,15 +25,6 @@ var map = new L.map('map', {
     layers: [mapquestMap, clouds]
 });
 
-var overlayMaps = {
-    "Cloud Cover": clouds,
-    "Rain precipitation": rain,
-    "Snow precipitation": snow,
-    "Quantity of precipitation": precipitation
-}
-
-L.control.layers(null, overlayMaps).addTo(map);
-
 var info = L.control();
 info.onAdd = function (map) {
     this._div = L.DomUtil.create('div', 'info');
@@ -45,4 +36,11 @@ info.update = function (props) {
 };
 info.addTo(map);
 
+var overlayMaps = {
+    "Cloud Cover": clouds,
+    "Rain precipitation": rain,
+    "Snow precipitation": snow,
+    "Quantity of precipitation": precipitation
+}
 
+L.control.layers(null, overlayMaps).addTo(map);
