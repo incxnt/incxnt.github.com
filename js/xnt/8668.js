@@ -21,4 +21,15 @@ var map = new L.map('map', {
     layers: [mapquestMap]
 });
 
+var info = L.control();
+info.onAdd = function (map) {
+    this._div = L.DomUtil.create('div', 'info');
+    this.update();
+    return this._div;
+};
+info.update = function (props) {
+    this._div.innerHTML = '<h4>实时天气地图</h4>';
+};
+info.addTo(map);
+
 L.tileLayer('http://{s}.tile.openweathermap.org/map/snow/{z}/{x}/{y}.png').addTo(map); // clouds snow rain precipitation
