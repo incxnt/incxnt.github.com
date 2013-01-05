@@ -32,7 +32,7 @@ info.onAdd = function (map) {
     return this._div;
 };
 info.update = function (props) {
-    this._div.innerHTML = '<h4>实时天气地图</h4>';
+    this._div.innerHTML = '<h4>实时气象地图</h4>';
 };
 info.addTo(map);
 
