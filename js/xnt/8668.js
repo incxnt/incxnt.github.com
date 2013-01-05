@@ -3,7 +3,7 @@ var cloudmadeStyle = 22677;
 var cloudmadeUrl = 'http://{s}.tile.cloudmade.com/' + cloudmadeKey + '/' + cloudmadeStyle + '/256/{z}/{x}/{y}.png';
 var cloudmadeMap = new L.tileLayer(cloudmadeUrl);
 
-var mapquestUrl = 'http://{s}.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png';   //map & sat
+var mapquestUrl = 'http://{s}.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.png';   //map & sat & osm
 var subDomains = ['otile1','otile2','otile3','otile4'];
 var mapquestMap = new L.TileLayer(mapquestUrl, {subdomains: subDomains});
 
