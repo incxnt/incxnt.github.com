@@ -21,7 +21,4 @@ var map = new L.map('map', {
     layers: [mapquestMap]
 });
 
-L.tileLayer('http://{s}.tile.openweathermap.org/map/weather/{z}/{x}/{y}.png').addTo(map); // clouds
-
-var validatorsLayer = new OsmJs.Weather.LeafletLayer({lang: 'ru'}); 
-map.addLayer(validatorsLayer);
+L.tileLayer('http://{s}.tile.openweathermap.org/map/snow/{z}/{x}/{y}.png').addTo(map); // clouds snow rain precipitation
