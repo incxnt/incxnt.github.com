@@ -8,7 +8,7 @@ var subDomains = ['otile1','otile2','otile3','otile4'];
 var mapquestMap = new L.TileLayer(mapquestUrl, {subdomains: subDomains});
 
 
-var mapCenter = new L.LatLng(24.700, 118.089425);
+var mapCenter = new L.LatLng(35.86166, 104.195397);
 var initZoom = 0;
 var minZoom = 0;
 var maxZoom = 20;
