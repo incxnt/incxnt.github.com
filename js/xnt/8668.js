@@ -9,9 +9,9 @@ var mapquestMap = new L.TileLayer(mapquestUrl, {subdomains: subDomains});
 
 
 var mapCenter = new L.LatLng(35.86166, 104.195397);
-var initZoom = 0;
-var minZoom = 0;
-var maxZoom = 20;
+var initZoom = 4;
+var minZoom = 2;
+var maxZoom = 4;
 var map = new L.map('map', {
     attributionControl: false,
     center: mapCenter,
