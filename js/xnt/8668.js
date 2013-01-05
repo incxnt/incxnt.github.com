@@ -21,4 +21,4 @@ var map = new L.map('map', {
     layers: [mapquestMap]
 });
 
-L.tileLayer('http://{s}.tile.openweathermap.org/map/clouds/{z}/{x}/{y}.png').addTo(map);
+L.tileLayer('http://{s}.tile.openweathermap.org/map/weather/{z}/{x}/{y}.png').addTo(map); // clouds
