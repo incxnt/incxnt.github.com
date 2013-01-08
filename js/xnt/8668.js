@@ -11,7 +11,7 @@ var snow = L.tileLayer('http://{s}.tile.openweathermap.org/map/snow/{z}/{x}/{y}.
 var rain = L.tileLayer('http://{s}.tile.openweathermap.org/map/rain/{z}/{x}/{y}.png');
 var precipitation = L.tileLayer('http://{s}.tile.openweathermap.org/map/precipitation/{z}/{x}/{y}.png');
 var clouds = L.tileLayer('http://{s}.tile.openweathermap.org/map/clouds/{z}/{x}/{y}.png');
-var temp = L.tileLayer('http://{s}.tile.openweathermap.org/map/temp/{z}/{x}/{y}.png');
+// var temp = L.tileLayer('http://{s}.tile.openweathermap.org/map/temp/{z}/{x}/{y}.png');
 
 var mapCenter = new L.LatLng(35.86166, 104.195397);
 var initZoom = 4;
@@ -38,7 +38,6 @@ info.update = function () { // props
 info.addTo(map);
 
 var overlayMaps = {
-    "Temperature": temp,
     "Cloud Cover": clouds,
     "Rain precipitation": rain,
     "Snow precipitation": snow,
