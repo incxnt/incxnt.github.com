@@ -23,7 +23,7 @@ var map = new L.map('map', {
     zoom: initZoom,
     minZoom: minZoom,
     maxZoom: maxZoom,
-    layers: [mapquestMap, temp]
+    layers: [mapquestMap, clouds]
 });
 
 var info = L.control();
