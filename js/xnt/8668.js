@@ -16,7 +16,7 @@ var temp = L.tileLayer('http://{s}.tile.openweathermap.org/map/temp/{z}/{x}/{y}.
 var mapCenter = new L.LatLng(35.86166, 104.195397);
 var initZoom = 4;
 var minZoom = 2;
-var maxZoom = 4;
+var maxZoom = 6;
 var map = new L.map('map', {
     attributionControl: false,
     center: mapCenter,
