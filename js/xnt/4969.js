@@ -10,4 +10,13 @@ var circle = svg.selectAll("circle")
                             .append("circle")
                             .attr("cx", function (d) {return d;})
                             .attr("cy", function (d) {return d;})
-                            .attr("r", 20);
+                            .attr("r", 20)
+                            .style("fill", function (d) {
+                                var color;
+                                switch (d) {
+                                        case 30: color = "green"; break;
+                                        case 70: color = "purple"; break;
+                                        case 110: color = "red"; break;
+                                }
+                                return color;
+                            });
