@@ -5,4 +5,4 @@ var p = d3.select("#xnt-viz")
             .data(data)
             .enter()
             .append("p")
-            .text("hello");
+            .text(function (d) {return d;});
