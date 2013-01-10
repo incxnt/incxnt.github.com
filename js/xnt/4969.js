@@ -5,9 +5,6 @@ var p = d3.select("#xnt-viz")
             .data(data)
             .enter()
             .append("p")
-            .text(function (d) {
-                var addedNumber = 2;
-                var result;
-                result = d + addedNumber;
-                return result;
+            .text(function (d, i) {
+                return "i = " + i + ", d = " + d;
             });
