@@ -4,9 +4,9 @@ var cloudmadeUrl = 'http://{s}.tile.cloudmade.com/' + cloudmadeKey + '/' + cloud
 var cloudmadeMap = new L.tileLayer(cloudmadeUrl);
 
 var mapCenter = new L.LatLng(24.874699, 118.675464); // Reflect the current province
-var initZoom = 6;                                   // Reflect the proper zoom setting
-var minZoom = 6;                                    // Reflect the proper zoom setting
-var maxZoom = 10;                                    // Reflect the proper zoom setting
+var initZoom = 9;                                   // Reflect the proper zoom setting
+var minZoom = 9;                                    // Reflect the proper zoom setting
+var maxZoom = 9;                                    // Reflect the proper zoom setting
 var map = new L.map('map', {
     attributionControl: false,
     center: mapCenter,
