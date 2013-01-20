@@ -3,7 +3,7 @@ var cloudmadeStyle = 22677;
 var cloudmadeUrl = 'http://{s}.tile.cloudmade.com/' + cloudmadeKey + '/' + cloudmadeStyle + '/256/{z}/{x}/{y}.png';
 var cloudmadeMap = new L.tileLayer(cloudmadeUrl);
 
-var mapCenter = new L.LatLng(25.2, 118.675464); // Reflect the current province
+var mapCenter = new L.LatLng(25.3, 118.675464); // Reflect the current province
 var initZoom = 9;                                   // Reflect the proper zoom setting
 var minZoom = 9;                                    // Reflect the proper zoom setting
 var maxZoom = 9;                                    // Reflect the proper zoom setting
