@@ -48,4 +48,12 @@ d3.json("uk.json", function(error, uk) {
     svg.selectAll(".place-label")
         .attr("x", function(d) { return d.coordinates[0] > -1 ? 6 : -6; })
         .style("text-anchor", function(d) { return d.coordinates[0] > -1 ? "start" : "end"; });
+    
+    svg.selectAll(".subunit-label")
+        .data(topojson.object(uk, uk.objects.subunits).geometries)
+        .enter().append("text")
+        .attr("class", function(d) { return "subunit-label " + d.id; })
+        .attr("transform", function(d) { return "translate(" + path.centroid(d) + ")"; })
+        .attr("dy", ".35em")
+        .text(function(d) { return d.properties.name; });
 });
