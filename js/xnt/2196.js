@@ -36,4 +36,12 @@ d3.json("uk.json", function(error, uk) {
         .datum(topojson.object(uk, uk.objects.places))
         .attr("d", path)
         .attr("class", "place");
+    
+    svg.selectAll(".place-label")
+        .data(topojson.object(uk, uk.objects.places).geometries)
+        .enter().append("text")
+        .attr("class", "place-label")
+        .attr("transform", function(d) { return "translate(" + projection(d.coordinates) + ")"; })
+        .attr("dy", ".35em")
+        .text(function(d) { return d.properties.name; });
 });
