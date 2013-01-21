@@ -16,6 +16,12 @@ var path = d3.geo.path()
                 .projection(projection);
 
 d3.json("uk.json", function(error, uk) {
+    svg.selectAll(".subunit")
+        .data(topojson.object(uk, uk.objects.subunits).geometries)
+        .enter().append("path")
+        .attr("class", function(d) { return "subunit " + d.id; })
+        .attr("d", path);
+    
     svg.append("path")
         .datum(topojson.mesh(uk, uk.objects.subunits, function(a, b) { return a !== b && a.id !== "IRL"; }))
         .attr("d", path)
