@@ -31,4 +31,9 @@ d3.json("uk.json", function(error, uk) {
         .datum(topojson.mesh(uk, uk.objects.subunits, function(a, b) { return a === b && a.id === "IRL"; }))
         .attr("d", path)
         .attr("class", "subunit-boundary IRL");
+    
+    svg.append("path")
+        .datum(topojson.object(uk, uk.objects.places))
+        .attr("d", path)
+        .attr("class", "place");
 });
