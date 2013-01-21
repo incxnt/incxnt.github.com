@@ -10,7 +10,7 @@ d3.json("uk.json", function(error, uk) {
     var subunits = topojson.object(uk, uk.objects.subunits);
 
     var projection = d3.geo.mercator()
-                    .scale(500)
+                    .scale(5000)
                     .translate([width / 2, height / 2]);
     /*
     var projection = d3.geo.albers()
