@@ -44,4 +44,8 @@ d3.json("uk.json", function(error, uk) {
         .attr("transform", function(d) { return "translate(" + projection(d.coordinates) + ")"; })
         .attr("dy", ".35em")
         .text(function(d) { return d.properties.name; });
+    
+    svg.selectAll(".place-label")
+        .attr("x", function(d) { return d.coordinates[0] > -1 ? 6 : -6; })
+        .style("text-anchor", function(d) { return d.coordinates[0] > -1 ? "start" : "end"; });
 });
