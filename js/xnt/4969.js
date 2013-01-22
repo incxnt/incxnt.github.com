@@ -22,7 +22,7 @@ for (var i = 0; i < jsonRectangles.length; i++) {
 
 }
 
-var svgContainer = d3.select("body").append("svg")
+var svgContainer = d3.select("#xnt-viz").append("svg")
     .attr("width", max_x + 20)
     .attr("height", max_y + 20);
 
