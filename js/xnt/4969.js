@@ -1,23 +1,20 @@
-var lineD = [
-    {"x": 1, "y": 5},
-    {"x": 20, "y": 20},
-    {"x": 40, "y": 10},
-    {"x": 60, "y": 40},
-    {"x": 80, "y": 5},
-    {"x": 100, "y": 60}
-]
-    
-var lineF = d3.svg.line ()
-                    .x (function (d) {return d.x;})
-                    .y (function (d) {return d.y;})
-                    .interpolate ("linear");
+var jsonRectangles = [
+    { "x_axis": 10, "y_axis": 10, "height": 20, "width":20, "color" : "green" },
+    { "x_axis": 40, "y_axis": 40, "height": 20, "width":20, "color" : "purple" },
+    { "x_axis": 70, "y_axis": 70, "height": 20, "width":20, "color" : "red" }];
 
-var svg = d3.select("#xnt-viz").append("svg")
-                                .attr("width", 200)
-                                .attr("height", 200);
+var svgContainer = d3.select("#xnt-viz").append("svg")
+    .attr("width", 100)
+    .attr("height", 100);
 
-var lineG = svg.append("path")
-                .attr("d", lineF(lineD))
-                .attr("stroke", "blue")
-                .attr("stroke-width", 2)
-                .attr("fill", "none");
+var rectangles = svgContainer.selectAll("rect")
+    .data(jsonRectangles)
+    .enter()
+    .append("rect");
+
+var rectangleAttributes = rectangles
+    .attr("x", function (d) { return d.x_axis; })
+    .attr("y", function (d) { return d.y_axis; })
+    .attr("height", function (d) { return d.height; })
+    .attr("width", function (d) { return d.width; })
+    .style("fill", function(d) { return d.color; });
