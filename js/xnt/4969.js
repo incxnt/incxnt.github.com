@@ -1,39 +1,34 @@
-var jsonRectangles = [
-    { "x_axis": 10, "y_axis": 10, "height": 20, "width":20, "color" : "green" },
-    { "x_axis": 160, "y_axis": 40, "height": 20, "width":20, "color" : "purple" },
-    { "x_axis": 70, "y_axis": 70, "height": 20, "width":20, "color" : "red" }];
-
-var max_x = 0;
-var max_y = 0;
-
-for (var i = 0; i < jsonRectangles.length; i++) {
-
-    var temp_x, temp_y;
-    var temp_x = jsonRectangles[i].x_axis + jsonRectangles[i].width;
-    var temp_y = jsonRectangles[i].y_axis + jsonRectangles[i].height;
-
-    if ( temp_x >= max_x ) {
-        max_x = temp_x;
-    }
-
-    if ( temp_y >= max_y ) {
-        max_y = temp_y;
-    }
-
-}
-
+var circleData = [
+    { "cx": 20, "cy": 20, "radius": 20, "color" : "green" }, 
+    { "cx": 70, "cy": 70, "radius": 20, "color" : "purple" }];
+ 
+var rectangleData = [
+    { "rx": 110, "ry": 110, "height": 30, "width": 30, "color" : "blue" },
+    { "rx": 160, "ry": 160, "height": 30, "width": 30, "color" : "red" }];
+ 
 var svgContainer = d3.select("#xnt-viz").append("svg")
-    .attr("width", max_x + 20)
-    .attr("height", max_y + 20);
+    .attr("width",200)
+    .attr("height",200);
+
+var circles = svgContainer.selectAll("circle")
+    .data(circleData)
+    .enter()
+    .append("circle");
+
+var circleAttributes = circles
+    .attr("cx", function (d) { return d.cx; })
+    .attr("cy", function (d) { return d.cy; })
+    .attr("r", function (d) { return d.radius; })
+    .style("fill", function (d) { return d.color; });
 
 var rectangles = svgContainer.selectAll("rect")
-    .data(jsonRectangles)
+    .data(rectangleData)
     .enter()
     .append("rect");
 
 var rectangleAttributes = rectangles
-    .attr("x", function (d) { return d.x_axis; })
-    .attr("y", function (d) { return d.y_axis; })
+    .attr("x", function (d) { return d.rx; })
+    .attr("y", function (d) { return d.ry; })
     .attr("height", function (d) { return d.height; })
     .attr("width", function (d) { return d.width; })
     .style("fill", function(d) { return d.color; });
