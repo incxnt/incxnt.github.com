@@ -16,3 +16,8 @@ var circleAttributes = circles
     .attr("cy", function (d) { return d.cy; })
     .attr("r", function (d) { return d.radius; })
     .style("fill", function (d) { return d.color; });
+
+var text = svgContainer.selectAll("text")
+    .data(circleData)
+    .enter()
+    .append("text");
