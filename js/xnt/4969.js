@@ -10,7 +10,9 @@ var svgContainer = d3.select("#xnt-viz").append("svg")
     .attr("width",200)
     .attr("height",200);
 
-var circles = svgContainer.selectAll("circle")
+var circleGroup = svgContainer.append("g");
+
+var circles = circleGroup.selectAll("circle")
     .data(circleData)
     .enter()
     .append("circle");
