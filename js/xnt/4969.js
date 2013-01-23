@@ -21,3 +21,11 @@ var text = svgContainer.selectAll("text")
     .data(circleData)
     .enter()
     .append("text");
+
+var textLabels = text
+    .attr("x", function(d) { return d.cx; })
+    .attr("y", function(d) { return d.cy; })
+    .text( function (d) { return "( " + d.cx + ", " + d.cy +" )"; })
+    .attr("font-family", "sans-serif")
+    .attr("font-size", "20px")
+    .attr("fill", "red");
