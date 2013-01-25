@@ -8,3 +8,6 @@ var axisScale = d3.scale.linear()
 
 var xAxis = d3.svg.axis()
     .scale(axisScale);
+
+var xAxisGroup = svgContainer.append("g")
+    .call(xAxis);
