@@ -21,12 +21,12 @@ d3.json("china.json", function(error, china) {
         .datum(chinaProvince)
         .attr("d", path);
     */
-    /*
+    
     svg.selectAll(".chinaProvince")
-        .datum(chinaProvince)
+        .data(chinaProvince.geometries)
         .enter()
         .append("path")
         .attr("class", function(d) {return "chinaProvince " + d.id;})
         .attr("d", path);
-    */
+    
 });
