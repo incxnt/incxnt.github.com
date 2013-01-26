@@ -1,4 +1,4 @@
-path[class^=TW] { fill: #A6CEE3; }
+path[class$=GS] { fill: #A6CEE3; }
 
 /*
 .subunit.SCT { fill: #ddc; }
