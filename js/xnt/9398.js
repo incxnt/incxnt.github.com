@@ -1,5 +1,5 @@
-var width = 1000,
-    height = 750;
+var width = 960,
+    height = 700;
 
 var projection = d3.geo.mercator()
     .scale(1000)
