@@ -16,7 +16,7 @@ var svg = d3.select("#xnt-box").append("svg")
 d3.json("china.json", function(error, china) {
     
     var chinaProvince = topojson.object(china, china.objects.chinaProvince);
-    var chinaRail = topojson.object(china, china.objects.chinarail);
+    
     
     svg.selectAll("chinaProvince")
         .data(chinaProvince.geometries)
@@ -26,7 +26,7 @@ d3.json("china.json", function(error, china) {
         .attr("d", path);
     
     svg.append("path")
-        .datum(chinaRail)
+        .datum(topojson.object(china, china.objects.chinaRail))
         .attr("d", path);
     
 });
