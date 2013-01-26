@@ -1,3 +1,4 @@
+/*
 var width = 1000,
     height = 800;
 
@@ -17,3 +18,4 @@ d3.json("china.json", function(error, cn) {
         .datum(topojson.object(cn, cn.objects.subunits))
         .attr("d", path);
 });
+*/
