@@ -22,7 +22,7 @@ d3.json("china.json", function(error, china) {
         .attr("d", path);
     */
     
-    svg.selectAll("chinaProvince")
+    svg.selectAll("path")
         .data(chinaProvince)
         .enter()
         .append("path")
