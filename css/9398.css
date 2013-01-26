@@ -10,6 +10,30 @@ path[class$=GD] { fill: #CAB2D6; }
 path[class$=XZ] { fill: #6A3D9A; }
 path[class$=XJ] { fill: #FFFF99; }
 
+path[class$=HA] { fill: #A6CEE3; }
+path[class$=NX] { fill: #1F78B4; }
+path[class$=SA] { fill: #B2DF8A; }
+path[class$=SX] { fill: #33A02C; }
+path[class$=HU] { fill: #FB9A99; }
+path[class$=HN] { fill: #E31A1C; }
+path[class$=SC] { fill: #FDBF6F; }
+path[class$=YN] { fill: #FF7F00; }
+path[class$=HB] { fill: #CAB2D6; }
+path[class$=HE] { fill: #6A3D9A; }
+path[class$=LN] { fill: #FFFF99; }
+
+path[class$=SD] { fill: #A6CEE3; }
+path[class$=TJ] { fill: #1F78B4; }
+path[class$=JX] { fill: #B2DF8A; }
+path[class$=JS] { fill: #33A02C; }
+path[class$=SH] { fill: #FB9A99; }
+path[class$=ZJ] { fill: #E31A1C; }
+path[class$=JL] { fill: #FDBF6F; }
+path[class$=NM] { fill: #FF7F00; }
+path[class$=HL] { fill: #CAB2D6; }
+path[class^=TW] { fill: #6A3D9A; }
+// path[class$=XJ] { fill: #FFFF99; }
+
 /*
 .subunit.SCT { fill: #ddc; }
 .subunit.WLS { fill: #cdd; }
