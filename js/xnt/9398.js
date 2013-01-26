@@ -1,8 +1,8 @@
 var width = 1000,
     height = 800;
 
-var projection = d3.geo.mercator()
-    .scale(500)
+var projection = d3.geo.albers()
+    .scale(6000)
     .translate([width / 2, height / 2]);
 
 var path = d3.geo.path()
