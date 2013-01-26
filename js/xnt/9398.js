@@ -1,4 +1,3 @@
-
 var width = 1000,
     height = 800;
 
@@ -13,10 +12,12 @@ var svg = d3.select("#xnt-box").append("svg")
     .attr("width", width)
     .attr("height", height);
 
-var chinaProvince = topojson.object(china, china.objects.chinaProvince);
-
 d3.json("china.json", function(error, china) {
+    
+    var chinaProvince = topojson.object(china, china.objects.chinaProvince);
+    
     svg.append("path")
         .datum(chinaProvince)
         .attr("d", path);
+    
 });
