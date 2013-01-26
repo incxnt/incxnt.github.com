@@ -1,3 +1,4 @@
+/*
 path[class$=GS] { fill: #A6CEE3; }
 path[class$=QH] { fill: #1F78B4; }
 path[class$=GX] { fill: #B2DF8A; }
@@ -32,15 +33,9 @@ path[class$=JL] { fill: #FDBF6F; }
 path[class$=NM] { fill: #FF7F00; }
 path[class$=HL] { fill: #CAB2D6; }
 path[class^=TW] { fill: #6A3D9A; }
-// path[class$=XJ] { fill: #FFFF99; }
+*/
 
 /*
-.subunit.SCT { fill: #ddc; }
-.subunit.WLS { fill: #cdd; }
-.subunit.NIR { fill: #cdc; }
-.subunit.ENG { fill: #dcd; }
-.subunit.IRL { display: none; }
-
 .subunit-boundary {
   fill: none;
   stroke: #777;
