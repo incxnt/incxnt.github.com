@@ -15,6 +15,6 @@ var svg = d3.select("#xnt-box").append("svg")
 
 d3.json("china.json", function(error, china) {
   svg.append("path")
-      .datum(topojson.object(china, china.objects.subunits))
+      .datum(topojson.object(china, china.objects.chinaProvince))
       .attr("d", d3.geo.path().projection(d3.geo.mercator()));
 });
