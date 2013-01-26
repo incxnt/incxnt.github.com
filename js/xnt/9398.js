@@ -2,6 +2,7 @@ var width = 960,
     height = 700;
 
 var projection = d3.geo.mercator()
+    .center([104.195397, 35.86166])
     .scale(1000)
     .translate([width / 2, height / 2]);
 
