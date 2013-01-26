@@ -17,7 +17,7 @@ d3.json("china.json", function(error, china) {
     
     var chinaProvince = topojson.object(china, china.objects.chinaProvince);
     
-    svg.selectAll(".chinaProvince")
+    svg.selectAll("chinaProvince")
         .data(chinaProvince.geometries)
         .enter()
         .append("path")
