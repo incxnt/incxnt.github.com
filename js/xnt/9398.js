@@ -16,17 +16,12 @@ var svg = d3.select("#xnt-box").append("svg")
 d3.json("china.json", function(error, china) {
     
     var chinaProvince = topojson.object(china, china.objects.chinaProvince);
-    /*
-    svg.append("path")
-        .datum(chinaProvince)
-        .attr("d", path);
-    */
     
     svg.selectAll(".chinaProvince")
         .data(chinaProvince.geometries)
         .enter()
         .append("path")
-        .attr("class", function(d) {return "chinaProvince " + d.id;})
+        .attr("class", function(d) {return d.id;})
         .attr("d", path);
     
 });
