@@ -17,8 +17,11 @@ d3.json("china.json", function(error, china) {
     
     var chinaProvince = topojson.object(china, china.objects.chinaProvince);
     
-    svg.append("path")
-        .datum(chinaProvince)
+    svg.selectAll(".chinaProvince")
+        .data(chinaProvince)
+        .enter()
+        .append("path")
+        .attr("class", function(d) {return "chinaProvince" + d.id;})
         .attr("d", path);
     
 });
